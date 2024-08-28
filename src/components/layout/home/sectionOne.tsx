@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 export const SectionOne = () => {
   return (
     <Container id="home">
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-32 pb-8 max-w-6xl m-auto">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-32 pb-8 pt-16 lg:pt-0 pmax-w-6xl m-auto">
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="text-4xl md:text-5xl  text-txt font-bold mb-4">
