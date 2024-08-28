@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3, h4, button {
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+.elevii {
+    right: 0;
+}
+
+ul.slick-dots {
+    bottom: -50px;
+}
+
+.slick-next, .slick-prev {
+    display: none !important;
+}
