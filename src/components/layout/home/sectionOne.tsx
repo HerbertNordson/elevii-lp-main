@@ -15,14 +15,14 @@ export const SectionOne = () => {
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="text-4xl md:text-5xl  text-txt font-bold mb-4">
-              Criamos <br className="block md:hidden" />
+              Criamos
               <TypeAnimation
                 sequence={[
-                  "aplicativos",
+                  " aplicativos",
                   1000,
-                  "sistemas",
+                  " sistemas",
                   1000,
-                  "web sites",
+                  " web sites",
                   1000,
                 ]}
                 wrapper="span"
