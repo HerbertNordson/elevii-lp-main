@@ -31,13 +31,13 @@ export const Header = () => {
     <header
       className={`${
         fixedHeader &&
-        " transition duration-500 bg-back-transparent shadow-md z-10"
+        " transition duration-500 bg-back-transparent shadow-md z-20"
       } fixed left-0 top-0 w-full mb-4`}
     >
       <div
         className={`flex justify-between items-center lg:max-w-screen-xl m-auto p-2 lg:p-4`}
       >
-        <Link href="#home" className="z-10">
+        <Link href="#home" className="z-20">
           <Image
             src={Logo}
             alt="Logo da empresa Elevii"

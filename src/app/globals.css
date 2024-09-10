@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 h1, h2, h3, h4, button {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter);
 }
 
 p {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--font-lato);
 }
 
 .elevii {
@@ -18,6 +18,9 @@ ul.slick-dots {
     bottom: -50px;
 }
 
-.slick-next, .slick-prev {
-    display: none !important;
+.smartphone {
+    background-image: url('../assets/molde_phone.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
 }

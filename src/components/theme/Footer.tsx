@@ -1,9 +1,3 @@
-import Image from "next/image";
-
-//Image
-import Logo from "@/assets/logo_elevii.png";
-import Link from "next/link";
-
 export const Footer = () => {
   return (
     <footer className="py-20 lg:pt-28 lg:pb-10 px-6 bg-txt-light text-back-strong shadow-t shadow-txt">

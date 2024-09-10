@@ -5,11 +5,13 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
 });
 
 const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={
-          inter.className +
-          "flex is-full min-bs-full flex-auto flex-col" +
-          lato.className
-        }
+        className={`${inter.variable} flex is-full min-bs-full flex-auto flex-col ${lato.variable}`}
       >
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         {children}
       </body>
     </html>

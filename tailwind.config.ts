@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // that is animation class
+      animation: {
+        fade: "fadeOut 1s ease-in-out",
+      },
+
+      // that is actual animation
+      keyframes: {
+        fadeOut: {
+          "0%": { opacity: "0" },
+          "50%": { opacity: "0.5" },
+          "100%": { opacity: "1" },
+        },
+      },
       container: {
         center: true,
         padding: {
@@ -27,10 +40,10 @@ const config: Config = {
       colors: {
         txt: "#363636",
         "txt-light": "#1a1b1f",
-        
+
         primary: "#C92037",
         "primary-op": "rgba(201, 32, 55, .6)",
-        
+
         back: "#EAEFF4",
         "back-strong": "#F5FAFF",
         "back-transparent": "rgb(255,255,255,0.6)",
@@ -44,15 +57,15 @@ const config: Config = {
         _45: "-45deg",
       },
       divideWidth: {
-        '16': '16px'
+        "16": "16px",
       },
       boxShadow: {
-        't': '0px 0px 20px 2px rgba(0, 0, 0, 0.3)',
+        t: "0px 0px 20px 2px rgba(0, 0, 0, 0.3)",
       },
       inset: {
-        'neg': '-.7rem',
-        'pos': '.5rem'
-      }
+        neg: "-.7rem",
+        pos: ".5rem",
+      },
     },
   },
   plugins: [],

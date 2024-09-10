@@ -15,7 +15,7 @@ export const SectionOne = () => {
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="text-4xl md:text-5xl  text-txt font-bold mb-4">
-              Criamos
+              Criamos 
               <TypeAnimation
                 sequence={[
                   " aplicativos",
