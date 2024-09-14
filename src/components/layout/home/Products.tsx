@@ -10,7 +10,9 @@ import Sementes from "@/assets/sementes.jpg";
 import MoldeSmart from "@/assets/molde_phone.png";
 import Check from "@/assets/checkmark.png";
 import { useMemo, useState } from "react";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { IconChevronLeft, IconChevronRight, IconLoader3 } from "@tabler/icons-react";
+import { Button } from "@/components/theme/Button";
+import { redirect } from "next/navigation";
 
 const ListProduct: Array<Product> = [
   {
@@ -102,7 +104,7 @@ export const Product = () => {
   }
 
   return (
-    <Container>
+    <Container id="project">
       <div className="w-full h-full max-w-7xl m-auto">
         <h2 className="text-center text-3xl md:text-5xl font-bold text-txt mb-8 md:mb-32">
           Projetos desenvolvidos
@@ -110,7 +112,7 @@ export const Product = () => {
         {product && (
           <>
             <div
-              className={`relative max-w-4xl m-auto flex flex-col md:flex-row justify-center items-center gap-16 `}
+              className={`relative max-w-4xl m-auto flex flex-col md:flex-row justify-center items-center gap-32 `}
             >
               <button
                 className={`absolute top-[40%] left-0 rounded-full bg-primary ${
@@ -129,8 +131,9 @@ export const Product = () => {
                     }`}
                     key={item.id}
                   >
+                    <IconLoader3 className="animate-spin absolute text-primary" />
                     <Image
-                      className={`w-52 h-full  transition-all animate-fade`}
+                      className={`w-52 h-full transition-all animate-fade z-10`}
                       src={product.image}
                       alt="Aplicativo wastezero home page"
                     />
@@ -141,32 +144,44 @@ export const Product = () => {
                     />
                   </figure>
                   <div
-                    className={`h-full min-h-96 max-w-72 flex flex-col gap-4 text-justify transition-all animate-fade ${
+                    className={`h-full flex justify-evenly flex-col transition-all animate-fade ${
                       idx === index ? "visible" : "hidden"
                     }`}
                   >
-                    <h3 className="text-2xl text-txt text-center md:text-left">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-txt font-light">
-                      {product.description}
-                    </p>
-                    <p className="text-sm text-txt font-medium">
-                      Características:
-                    </p>
+                    <div
+                      className={`h-full min-h-96 max-w-72 flex flex-col gap-4 text-justify`}
+                    >
+                      <h3 className="text-2xl text-txt text-center md:text-left">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-txt font-normal">
+                        {product.description}
+                      </p>
+                      <p className="text-sm text-txt font-medium">
+                        Características:
+                      </p>
 
-                    <ul className="pl-4 text-left flex flex-col gap-2">
-                      {product.characteristics.map((char: string) => (
-                        <li className="flex items-center gap-2" key={char}>
-                          <Image
-                            className="size-4"
-                            src={Check}
-                            alt="checkmark"
-                          />
-                          <p className="text-sm text-txt font-light">{char}</p>
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="pl-4 text-left flex flex-col gap-2">
+                        {product.characteristics.map((char: string) => (
+                          <li className="flex items-center gap-4" key={char}>
+                            <Image
+                              className="size-6"
+                              src={Check}
+                              alt="checkmark"
+                            />
+                            <p className="text-sm text-txt font-normal">
+                              {char}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <a
+                      href="#contact"
+                      className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6"
+                    >
+                      Entrar em contato
+                    </a>
                   </div>
                 </>
               ))}

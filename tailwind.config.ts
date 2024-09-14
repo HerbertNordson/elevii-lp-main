@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       // that is animation class
       animation: {
-        fade: "fadeOut 1s ease-in-out",
+        fade: "fadeOut .8s ease-in-out",
       },
 
       // that is actual animation

@@ -1,3 +1,11 @@
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconMail,
+} from "@tabler/icons-react";
+import Link from "next/link";
+
 export const Footer = () => {
   return (
     <footer className="py-20 lg:pt-28 lg:pb-10 px-6 bg-txt-light text-back-strong shadow-t shadow-txt">
@@ -17,26 +25,32 @@ export const Footer = () => {
           <h3 className="text-base text-back-strong font-semibold tracking-widest">
             Contato:
           </h3>
-          <p className="text-sm text-back-transparent font-light">
-            +55 (71) 9 9999-9999
-          </p>
-          <p className="text-sm text-back-transparent font-light">
-            contato@elevii.com.br
-          </p>
+          <Link
+            href="tel:71996250928"
+            className="text-sm text-back-transparent font-light"
+          >
+            +55 71 9 9625-0928
+          </Link>
+          <Link
+            href="mailto:suporte@elevii.dev"
+            className="text-sm text-back-transparent font-light"
+          >
+            suporte@elevii.dev
+          </Link>
         </li>
         <li className="flex flex-col items-center md:items-start gap-4">
           <h3 className="text-base text-back-strong font-semibold tracking-widest">
             Serviços
           </h3>
-          <p className="text-sm text-back-transparent font-light">
+          <Link href="#contact" className="text-sm text-back-transparent font-light">
             Quero criar um app!
-          </p>
-          <p className="text-sm text-back-transparent font-light">
+          </Link>
+          <Link href="#contact" className="text-sm text-back-transparent font-light">
             Quero contratar um time de tecnologia!
-          </p>
-          <p className="text-sm text-back-transparent font-light">
+          </Link>
+          <Link href="#contact" className="text-sm text-back-transparent font-light">
             Quero uma consultoria!
-          </p>
+          </Link>
         </li>
         <li className="flex flex-col items-center md:items-start gap-4">
           <h3 className="text-base text-back-strong font-semibold tracking-widest">
@@ -45,15 +59,35 @@ export const Footer = () => {
           <a href="#team" className="text-sm text-back-transparent font-light">
             Quem somos
           </a>
-          <p className="text-sm text-back-transparent font-light">Projetos</p>
+          <Link href="#projeto" className="text-sm text-back-transparent font-light">Projetos</Link>
         </li>
         <li className="flex flex-col items-center md:items-start gap-4">
           <h3 className="text-base text-back-strong font-semibold tracking-widest">
             Redes Sociais
           </h3>
-          <p className="text-sm text-back-transparent font-light">Facebook</p>
-          <p className="text-sm text-back-transparent font-light">LinkedIn</p>
-          <p className="text-sm text-back-transparent font-light">Instagram</p>
+          <div className="flex gap-2">
+            <Link
+              href="https://www.instagram.com/eleviioficial"
+              target="_blank"
+              className="text-white size-8"
+            >
+              <IconBrandInstagram className="size-full" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/elevii-soluções"
+              target="_blank"
+              className="text-white size-8"
+            >
+              <IconBrandLinkedin className="size-full" />
+            </Link>
+            <Link
+              href="https://www.facebook.com/eleviioficial"
+              target="_blank"
+              className="text-white size-8"
+            >
+              <IconBrandFacebook className="size-full" />
+            </Link>
+          </div>
         </li>
       </ul>
       <div className="w-full mt-12">

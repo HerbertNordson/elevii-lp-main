@@ -3,7 +3,7 @@ import { Container } from "@/components/theme/Container";
 export const SectionFour = () => {
   return (
     <Container>
-      <div className="h-full max-w-6xl m-auto">
+      <div className="h-full max-w-6xl m-auto transition-all animate-fade">
         <h2 className="text-center text-3xl md:text-5xl font-bold text-txt mb-16 md:mb-32">
           Modelos de contratação
         </h2>

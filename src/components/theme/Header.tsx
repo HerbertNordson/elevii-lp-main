@@ -31,8 +31,8 @@ export const Header = () => {
     <header
       className={`${
         fixedHeader &&
-        " transition duration-500 bg-back-transparent shadow-md z-20"
-      } fixed left-0 top-0 w-full mb-4`}
+        " transition duration-500 bg-white shadow-md"
+      } fixed left-0 top-0 w-full mb-4 z-20`}
     >
       <div
         className={`flex justify-between items-center lg:max-w-screen-xl m-auto p-2 lg:p-4`}

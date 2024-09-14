@@ -15,7 +15,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Lading page Elevii tecnologia",
+  title: "Elevii tecnologia",
   description:
     "Este é um single page contendo informações gerais da Elevii. Aui, é possível encontrar um pouco sobre a empresa e serviços prestrados.",
 };
