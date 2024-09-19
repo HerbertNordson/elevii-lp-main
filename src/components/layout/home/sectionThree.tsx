@@ -8,11 +8,11 @@ export const SectionThree = () => {
   return (
     <Container classes="bg-txt-light" id="skills">
       <div className="h-full flex flex-col justify-center items-center max-w-6xl gap-12 m-auto" >
-        <h2 className="text-center text-3xl md:text-5xl font-bold text-back-strong">
+        <h2 className="text-center text-3xl md:text-5xl font-bold text-back-strong  pop">
           Como a <span className="text-primary">Elevii</span> pode me ajudar?
         </h2>
 
-        <p className="text-back-strong text-center text-lg">
+        <p className="text-back-strong text-center text-lg  pop">
           Possuímos um processo totalmente centrado em você afim de mitigar
           falhas e usar a nossa expertísse para agregar valor ao projeto,
           aumentando a sua satisfação e dos seus clientes.

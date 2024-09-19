@@ -149,15 +149,15 @@ export const Product = () => {
                     }`}
                   >
                     <div
-                      className={`h-full min-h-96 max-w-72 flex flex-col gap-4 text-justify`}
+                      className={`h-full min-h-96 flex flex-col gap-4 text-justify`}
                     >
-                      <h3 className="text-2xl text-txt text-center md:text-left">
+                      <h3 className="text-2xl text-txt text-center font-bold md:text-left pop">
                         {product.name}
                       </h3>
-                      <p className="text-sm text-txt font-normal">
+                      <p className="text-sm text-txt font-normal pop">
                         {product.description}
                       </p>
-                      <p className="text-sm text-txt font-medium">
+                      <p className="text-sm text-txt font-normal pop">
                         Características:
                       </p>
 
@@ -169,7 +169,7 @@ export const Product = () => {
                               src={Check}
                               alt="checkmark"
                             />
-                            <p className="text-sm text-txt font-normal">
+                            <p className="text-sm text-txt font-normal pop">
                               {char}
                             </p>
                           </li>
@@ -178,7 +178,7 @@ export const Product = () => {
                     </div>
                     <a
                       href="#contact"
-                      className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6"
+                      className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6 pop"
                     >
                       Entrar em contato
                     </a>

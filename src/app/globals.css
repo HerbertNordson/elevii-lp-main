@@ -10,6 +10,10 @@ p {
     font-family: var(--font-lato);
 }
 
+.pop {
+    font-family: var(--font-poppins);
+}
+
 .elevii {
     right: 0;
 }

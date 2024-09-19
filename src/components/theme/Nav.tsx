@@ -41,16 +41,24 @@ export const Nav = () => {
           } transition-width duration-500 flex-col justify-center font-medium text-xl h-screen fixed mt-14 top-0 right-0 bg-txt z-20 transition-all animate-fade`}
         >
           <li className="flex text-back hover:text-primary w-full m-1 p-5 justify-center">
-            <Link href="#team" onClick={() => setVisible(!visible)}>Quem somos</Link>
+            <Link href="#team" onClick={() => setVisible(!visible)}>
+              Quem somos
+            </Link>
           </li>
           <li className="flex text-back hover:text-primary w-full m-1 p-5 justify-center">
-            <Link href="#skills" onClick={() => setVisible(!visible)}>Nossos serviços</Link>
+            <Link href="#skills" onClick={() => setVisible(!visible)}>
+              Nossos serviços
+            </Link>
           </li>
           <li className="flex text-back hover:text-primary w-full m-1 p-5 justify-center">
-            <Link href="#project" onClick={() => setVisible(!visible)}>Projetos</Link>
+            <Link href="#project" onClick={() => setVisible(!visible)}>
+              Projetos
+            </Link>
           </li>
           <li className="flex text-back hover:text-primary w-full m-1 p-5 justify-center">
-            <Link href="#contact" onClick={() => setVisible(!visible)}>Contato</Link>
+            <Link href="#contact" onClick={() => setVisible(!visible)}>
+              Contato
+            </Link>
           </li>
           <li>
             <footer className="p-4 flex flex-col items-center gap-4 mt-20">

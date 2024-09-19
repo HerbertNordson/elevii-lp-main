@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lato } from "next/font/google";
+import { Inter, Lato, Poppins } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,6 +13,13 @@ const lato = Lato({
   weight: ["300", "400", "700", "900"],
   variable: "--font-lato",
 });
+
+const poppins = Lato({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-poppins",
+});
+
 
 export const metadata: Metadata = {
   title: "Elevii tecnologia",
@@ -28,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} flex is-full min-bs-full flex-auto flex-col ${lato.variable}`}
+        className={`${inter.variable} ${poppins.variable} flex is-full min-bs-full flex-auto flex-col ${lato.variable}`}
       >
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {children}

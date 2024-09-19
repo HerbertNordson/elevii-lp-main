@@ -7,32 +7,32 @@ export const Contact = () => {
   return (
     <Container classes="bg-txt-light" id="contact">
       <div className="h-full max-w-2xl m-auto">
-        <h2 className="text-center text-3xl md:text-5xl font-bold text-back mb-12 md:mb-24">
+        <h2 className="text-center text-3xl md:text-5xl font-bold text-back mb-12 md:mb-24 pop">
           Converse com a gente
         </h2>
 
         <form>
-          <p className="text-lg text-back-transparent my-4 text-center md:text-left">
+          <p className="text-lg text-back-transparent my-4 text-center md:text-left pop">
             Informações para facilitar o nosso contato
           </p>
           <div className="flex justify-between gap-4 py-2">
-            <label htmlFor="name" className="w-full">
+            <label htmlFor="name" className="w-full pop">
               <Input label="Nome" name="name" />
             </label>
-            <label htmlFor="corporate" className="w-full">
+            <label htmlFor="corporate" className="w-full pop">
               <Input label="Empresa" name="corporate" />
             </label>
           </div>
           <div className="flex justify-between gap-4 py-2">
-            <label htmlFor="email" className="w-full">
+            <label htmlFor="email" className="w-full pop">
               <Input label="E-mail" name="email" />
             </label>
-            <label htmlFor="phone" className="w-full">
+            <label htmlFor="phone" className="w-full pop">
               <Input label="Telefone" name="phone" />
             </label>
           </div>
 
-          <p className="text-lg text-back-transparent my-4 text-center md:text-left">
+          <p className="text-lg text-back-transparent my-4 text-center md:text-left pop">
             Algumas informações iniciais sobre o projeto
           </p>
           <div className="flex justify-between gap-4 mb-4">

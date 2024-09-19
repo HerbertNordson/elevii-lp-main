@@ -14,7 +14,7 @@ export const SectionTwo = () => {
           </figure>
         </div>
         <div className="lg:size-6/12 text-left text-txt flex flex-col gap-4">
-          <h2 className="text-center text-3xl md:text-5xl font-bold mb-5 md:mb-10">
+          <h2 className="text-center text-3xl md:text-5xl font-bold mb-5 md:mb-10 pop">
             Sobre nós
           </h2>
           <p className="text-lg">

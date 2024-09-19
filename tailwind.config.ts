@@ -32,6 +32,9 @@ const config: Config = {
           "2xl": "6rem",
         },
       },
+      fontFamily: {
+        'poppins': ['poppins'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
