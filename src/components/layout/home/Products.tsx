@@ -10,7 +10,11 @@ import Sementes from "@/assets/sementes.jpg";
 import MoldeSmart from "@/assets/molde_phone.png";
 import Check from "@/assets/checkmark.png";
 import { useMemo, useState } from "react";
-import { IconChevronLeft, IconChevronRight, IconLoader3 } from "@tabler/icons-react";
+import {
+  IconChevronLeft,
+  IconChevronRight,
+  IconLoader3,
+} from "@tabler/icons-react";
 import { Button } from "@/components/theme/Button";
 import { redirect } from "next/navigation";
 
@@ -111,82 +115,82 @@ export const Product = () => {
         </h2>
         {product && (
           <>
-            <div
-              className={`relative max-w-4xl m-auto flex flex-col md:flex-row justify-center items-center gap-32 `}
-            >
-              <button
-                className={`absolute top-[40%] left-0 rounded-full bg-primary ${
-                  index === 0 ? "hidden" : ""
-                }`}
-                onClick={handleBack}
-              >
-                {""}
-                <IconChevronLeft color="white" size={40} />
-              </button>
-              {ListProduct.map((item: Product, idx: number) => (
-                <>
-                  <figure
-                    className={`relative w-56 flex justify-center items-center gap-4 pt-2 pb-4  ${
-                      idx === index ? "visible" : "hidden"
-                    }`}
-                    key={item.id}
-                  >
-                    <IconLoader3 className="animate-spin absolute text-primary" />
-                    <Image
-                      className={`w-52 h-full transition-all animate-fade z-10`}
-                      src={product.image}
-                      alt="Aplicativo wastezero home page"
-                    />
-                    <Image
-                      className="absolute w-full h-full z-10"
-                      src={MoldeSmart}
-                      alt="Aplicativo wastezero home page"
-                    />
-                  </figure>
-                  <div
-                    className={`h-full flex justify-evenly flex-col transition-all animate-fade ${
-                      idx === index ? "visible" : "hidden"
-                    }`}
-                  >
+            <div className={`relative h-full min-w-3xl max-w-3xl lg:min-w-3xl lg:max-w-3xl md:min-w-2xl md:max-w-2xl m-auto flex justify-center`}>
+                <button
+                  className={`absolute top-[40%] left-0 md:left-[-10%] rounded-full bg-primary ${
+                    index === 0 ? "hidden" : ""
+                  }`}
+                  onClick={handleBack}
+                >
+                  {""}
+                  <IconChevronLeft color="white" size={40} />
+                </button>
+              <div className="flex w-full flex-col md:flex-row justify-between items-center gap-32 ">
+                {ListProduct.map((item: Product, idx: number) => (
+                  <>
+                    <figure
+                      className={`relative w-56 flex justify-center items-center gap-4 pt-2 pb-4  ${
+                        idx === index ? "visible" : "hidden"
+                      }`}
+                      key={item.id}
+                    >
+                      <IconLoader3 className="animate-spin absolute text-primary" />
+                      <Image
+                        className={`w-52 h-full transition-all animate-fade z-10`}
+                        src={product.image}
+                        alt="Aplicativo wastezero home page"
+                      />
+                      <Image
+                        className="absolute w-full h-full z-10"
+                        src={MoldeSmart}
+                        alt="Aplicativo wastezero home page"
+                      />
+                    </figure>
                     <div
-                      className={`h-full min-h-96 flex flex-col gap-4 text-justify`}
+                      className={`w-md h-full flex justify-evenly flex-col transition-all animate-fade ${
+                        idx === index ? "visible" : "hidden"
+                      }`}
                     >
-                      <h3 className="text-2xl text-txt text-center font-bold md:text-left pop">
-                        {product.name}
-                      </h3>
-                      <p className="text-sm text-txt font-normal pop">
-                        {product.description}
-                      </p>
-                      <p className="text-sm text-txt font-normal pop">
-                        Características:
-                      </p>
+                      <div
+                        className={`h-full min-h-96 flex flex-col gap-4 text-justify`}
+                      >
+                        <h3 className="text-2xl text-txt text-center font-bold md:text-left pop">
+                          {product.name}
+                        </h3>
+                        <p className="text-sm text-txt font-normal pop">
+                          {product.description}
+                        </p>
+                        <p className="text-sm text-txt font-normal pop">
+                          Características:
+                        </p>
 
-                      <ul className="pl-4 text-left flex flex-col gap-2">
-                        {product.characteristics.map((char: string) => (
-                          <li className="flex items-center gap-4" key={char}>
-                            <Image
-                              className="size-6"
-                              src={Check}
-                              alt="checkmark"
-                            />
-                            <p className="text-sm text-txt font-normal pop">
-                              {char}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
+                        <ul className="pl-4 text-left flex flex-col gap-2">
+                          {product.characteristics.map((char: string) => (
+                            <li className="flex items-center gap-4" key={char}>
+                              <Image
+                                className="size-6"
+                                src={Check}
+                                alt="checkmark"
+                              />
+                              <p className="text-sm text-txt font-normal pop">
+                                {char}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <a
+                        href="#contact"
+                        className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6 pop"
+                      >
+                        Entrar em contato
+                      </a>
                     </div>
-                    <a
-                      href="#contact"
-                      className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6 pop"
-                    >
-                      Entrar em contato
-                    </a>
-                  </div>
-                </>
-              ))}
+                  </>
+                ))}
+              </div>
               <button
-                className={`absolute top-[40%] right-0 rounded-full bg-primary ${
+                className={`absolute top-[40%] right-0 md:right-[-10%] rounded-full bg-primary ${
                   index === ListProduct.length - 1 ? "hidden" : ""
                 }`}
                 onClick={handleNext}
