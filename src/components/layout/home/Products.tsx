@@ -17,6 +17,7 @@ import {
 } from "@tabler/icons-react";
 import { Button } from "@/components/theme/Button";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 const ListProduct: Array<Product> = [
   {
@@ -115,16 +116,18 @@ export const Product = () => {
         </h2>
         {product && (
           <>
-            <div className={`relative h-full min-w-3xl max-w-3xl lg:min-w-3xl lg:max-w-3xl md:min-w-2xl md:max-w-2xl m-auto flex justify-center`}>
-                <button
-                  className={`absolute top-[40%] left-0 md:left-[-10%] rounded-full bg-primary ${
-                    index === 0 ? "hidden" : ""
-                  }`}
-                  onClick={handleBack}
-                >
-                  {""}
-                  <IconChevronLeft color="white" size={40} />
-                </button>
+            <div
+              className={`relative h-full min-w-3xl max-w-3xl lg:min-w-3xl lg:max-w-3xl md:min-w-2xl md:max-w-2xl m-auto flex justify-center`}
+            >
+              <button
+                className={`absolute top-[40%] left-0 md:left-[-10%] rounded-full bg-primary ${
+                  index === 0 ? "hidden" : ""
+                }`}
+                onClick={handleBack}
+              >
+                {""}
+                <IconChevronLeft color="white" size={40} />
+              </button>
               <div className="flex w-full flex-col md:flex-row justify-between items-center gap-32 ">
                 {ListProduct.map((item: Product, idx: number) => (
                   <>
@@ -179,12 +182,14 @@ export const Product = () => {
                           ))}
                         </ul>
                       </div>
-                      <a
-                        href="#contact"
-                        className="py-2 px-4 bg-primary text-white text-center rounded-md w-52 w-auto mt-6 pop"
-                      >
-                        Entrar em contato
-                      </a>
+                      <div className="flex justify-center">
+                        <Link
+                          href="#contact"
+                          className="w-52 py-2 px-4 bg-primary text-white text-center rounded-md mt-6 pop"
+                        >
+                          Entrar em contato
+                        </Link>
+                      </div>
                     </div>
                   </>
                 ))}
