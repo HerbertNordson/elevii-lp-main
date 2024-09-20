@@ -128,7 +128,7 @@ export const Product = () => {
                 {""}
                 <IconChevronLeft color="white" size={40} />
               </button>
-              <div className="flex w-full flex-col md:flex-row justify-between items-center gap-32 ">
+              <div className="flex w-full flex-col md:flex-row justify-between items-center gap-16 md:gap-0 md:items-between">
                 {ListProduct.map((item: Product, idx: number) => (
                   <>
                     <figure
@@ -150,12 +150,12 @@ export const Product = () => {
                       />
                     </figure>
                     <div
-                      className={`w-md h-full flex justify-evenly flex-col transition-all animate-fade ${
+                      className={`w-full md:w-6/12 h-full flex justify-evenly flex-col transition-all animate-fade ${
                         idx === index ? "visible" : "hidden"
                       }`}
                     >
                       <div
-                        className={`h-full min-h-96 flex flex-col gap-4 text-justify`}
+                        className={`h-full w-full flex flex-col gap-4 text-justify`}
                       >
                         <h3 className="text-2xl text-txt text-center font-bold md:text-left pop">
                           {product.name}
