@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Lato, Poppins } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,12 +16,11 @@ const lato = Lato({
   variable: "--font-lato",
 });
 
-const poppins = Lato({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],
   variable: "--font-poppins",
 });
-
 
 export const metadata: Metadata = {
   title: "Elevii tecnologia",
@@ -38,6 +39,18 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} flex is-full min-bs-full flex-auto flex-col ${lato.variable}`}
       >
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
         {children}
       </body>
     </html>

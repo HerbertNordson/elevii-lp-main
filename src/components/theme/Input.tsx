@@ -6,13 +6,15 @@ interface IInput {
   type?: string;
   name: string;
   label: string;
+  register?: {};
 }
 
-export const Input = ({ type = "text", name, label }: IInput) => {
+export const Input = ({ type = "text", name, label, register }: IInput) => {
   const [value, setValue] = useState<any>();
 
   return (
     <input
+      {...register}
       type={type}
       name={name}
       placeholder={label}

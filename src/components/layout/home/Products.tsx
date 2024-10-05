@@ -9,7 +9,7 @@ import Vizzua from "@/assets/vizzua.jpg";
 import Sementes from "@/assets/sementes.jpg";
 import MoldeSmart from "@/assets/molde_phone.png";
 import Check from "@/assets/checkmark.png";
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import {
   IconChevronLeft,
   IconChevronRight,
@@ -130,12 +130,12 @@ export const Product = () => {
               </button>
               <div className="flex w-full flex-col md:flex-row justify-between items-center gap-16 md:gap-0 md:items-between">
                 {ListProduct.map((item: Product, idx: number) => (
-                  <>
+                  <Fragment key={item.id}>
                     <figure
                       className={`relative w-56 flex justify-center items-center gap-4 pt-2 pb-4  ${
                         idx === index ? "visible" : "hidden"
                       }`}
-                      key={item.id}
+                      
                     >
                       <IconLoader3 className="animate-spin absolute text-primary" />
                       <Image
@@ -191,7 +191,7 @@ export const Product = () => {
                         </Link>
                       </div>
                     </div>
-                  </>
+                  </Fragment>
                 ))}
               </div>
               <button

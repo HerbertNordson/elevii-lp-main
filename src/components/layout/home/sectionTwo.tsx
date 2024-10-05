@@ -33,7 +33,7 @@ export const SectionTwo = () => {
           <p className="text-lg">
             Embora a nossa maior expertisse esteja na construção de aplicativos
             android e ios, também estamos antenados nas melhores tendências
-            tecnologicas. Ou seja, sendo você grande ou pequeno,
+            tecnologicas. Ou seja, sendo você grande ou pequeno,{" "}
             <span className="text-primary">
               nós podemos construir juntos o aplicativo e/ou sistema que a sua
               empresa precisa.
