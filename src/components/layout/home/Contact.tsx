@@ -1,7 +1,5 @@
 import { Button } from "@/components/theme/Button";
 import { Container } from "@/components/theme/Container";
-import { Input } from "@/components/theme/Input";
-import { Textarea } from "@/components/theme/Textarea";
 import { leadsAPI } from "@/services/leads";
 import { normalizeFormatCurrency, normalizePhoneNumber } from "@/utils/mask";
 import { useEffect, useState } from "react";
@@ -54,7 +52,15 @@ export const Contact = () => {
         "Informações enviadas com sucesso! Em breve nossa equipe entrará em contato."
       );
 
-      reset();
+      reset({
+        name: "",
+        email: "",
+        phone: "",
+        title: "",
+        description: "",
+        budget: "",
+        corporate: ""
+      });
 
       return;
     }
@@ -93,12 +99,11 @@ export const Contact = () => {
           </p>
           <div className="flex justify-between gap-4 py-2">
             <label htmlFor="name" className="w-full pop">
-              <Input
-                register={{
-                  ...register("name", { required: true, minLength: 3 }),
-                }}
-                label="Nome"
+              <input
+                {...register("name", { required: true, minLength: 3 })}
+                className="w-full bg-back-strong rounded-md px-4 py-2 outline-none ring-offset-2 focus:ring-2 focus:ring-primary"
                 name="name"
+                placeholder="Nome"
               />
               {errors.name && (
                 <span className="text-red-600 text-sm font-medium">
@@ -107,35 +112,34 @@ export const Contact = () => {
               )}
             </label>
             <label htmlFor="corporate" className="w-full pop">
-              <Input
-                register={{
-                  ...register("corporate", { required: true, minLength: 3 }),
-                }}
-                label="Empresa"
+              <input
+                {...register("corporate", { required: true, minLength: 3 })}
+                className="w-full bg-back-strong rounded-md px-4 py-2 outline-none ring-offset-2 focus:ring-2 focus:ring-primary"
                 name="corporate"
+                placeholder="Empresa"
               />
               {errors.corporate && (
                 <span className="text-red-600 text-sm font-medium">
-                  Por favor, insira o nome da empresa contendo três ou mais caracteres.
+                  Por favor, insira o nome da empresa contendo três ou mais
+                  caracteres.
                 </span>
               )}
             </label>
           </div>
           <div className="flex justify-between gap-4 py-2">
             <label htmlFor="email" className="w-full pop">
-              <Input
-                register={{
-                  ...register("email", {
-                    required: true,
-                    pattern: {
-                      value:
-                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                      message: "Por favor insira um endereço de e-mail válido.",
-                    },
-                  }),
-                }}
-                label="E-mail"
+              <input
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Por favor insira um endereço de e-mail válido.",
+                  },
+                })}
+                placeholder="E-mail"
                 name="email"
+                className="w-full bg-back-strong rounded-md px-4 py-2 outline-none ring-offset-2 focus:ring-2 focus:ring-primary"
               />
               {errors.email && (
                 <span className="text-red-600 text-sm font-medium">
@@ -169,10 +173,11 @@ export const Contact = () => {
           </p>
           <div className="flex justify-between gap-4 mb-4">
             <label htmlFor="title" className="w-full">
-              <Input
-                register={{ ...register("title", { required: true }) }}
-                label="Título do projeto"
+              <input
+                {...register("title", { required: true })}
+                placeholder="Título do projeto"
                 name="title"
+                className="w-full bg-back-strong rounded-md px-4 py-2 outline-none ring-offset-2 focus:ring-2 focus:ring-primary"
               />
               {errors.title && (
                 <span className="text-red-600 text-sm font-medium">
@@ -189,10 +194,11 @@ export const Contact = () => {
               />
             </label>
           </div>
-          <Textarea
-            register={{ ...register("description", { required: true }) }}
-            label="Descreva um pouco o seu projeto"
+          <textarea
+            {...register("description", { required: true })}
             name="description"
+            placeholder="Descreva um pouco o seu projeto"
+            className="w-full bg-back-strong rounded-md px-4 py-2 outline-none ring-offset-2 focus:ring-2 focus:ring-txt"
           />
 
           <div className="w-full py-6">
