@@ -92,7 +92,7 @@ export const Footer = () => {
       </ul>
       <div className="w-full mt-12">
         <p className="w-full text-center text-sm text-back-transparent font-light">
-          Copyright © 2024. Elev<span className="text-primary">II</span>.
+          Copyright © 2024. Elev<span className="text-primary font-bold">II</span>.
           Direitos reservados
         </p>
       </div>
